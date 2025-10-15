@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Video Summarizer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="popup.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center p-6">
+
+  <div class="flex items-center space-x-2 mb-6">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_square_%282017%29.svg" class="w-10 h-10">
+    <h1 class="text-2xl font-bold text-red-500">AI Video Summarizer</h1>
+  </div>
+
+  <div class="bg-gray-800 rounded-2xl shadow-xl p-5 w-full max-w-md">
+    
+    <div class="flex items-center justify-between mb-4">
+      <span class="text-gray-300 font-semibold">Summary Type:</span>
+      <select id="summaryType" class="p-2 bg-gray-700 text-white rounded-lg">
+        <option>Brief</option>
+        <option>Detailed</option>
+        <option>Timestamped</option>
+      </select>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-3 mb-5">
+      <button id="summarizeBtn" class="bg-gradient-to-r from-red-500 to-pink-500 px-5 py-2 rounded-xl font-semibold hover:opacity-90">Summarize</button>
+      <button class="bg-green-600 px-5 py-2 rounded-xl font-semibold hover:bg-green-700">Copy</button>
+      <button class="bg-orange-600 px-5 py-2 rounded-xl font-semibold hover:bg-orange-700">History</button>
+    </div>
+
+    <div id="output" class="bg-gray-900 p-4 rounded-xl h-48 overflow-y-auto border border-gray-700 text-sm text-gray-400">
+      Detecting current YouTube video...
+    </div>
+
+  </div>
+
+  <footer class="mt-6 text-gray-500 text-xs">Developed by Contributors 💡</footer>
+</body>
+</html>
